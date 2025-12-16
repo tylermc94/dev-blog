@@ -33,7 +33,8 @@ I am a Level 2 Software Support Engineer with HPE supporting the Zerto product. 
 
 ## My Favorite Things
 Some things that are holding my attention at the moment.
-- **Claude AI** - Has been super useful in setting up this site and helping me learn Python. I use the projects feature to have a "Tech Projects" folder with a bunch of chats inside for different things I'm working on.
+- **Claude AI** Has been super useful in setting up this site and helping me learn Python. I use the projects feature to have a "Tech Projects" folder with a bunch of chats inside for different things I'm working on.
+- **Factorio** With all the home automation stuff I've been working on in Home Assistant, the constant automation and optimization in this game is super satisfying. I can't stop playing.
 
 ## Connect With Me
 
