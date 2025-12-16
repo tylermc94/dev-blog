@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tylers Project Blog</title>
+    <link>http://192.168.0.234:8080/posts/</link>
+    <description>Recent content in Posts on Tylers Project Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.0.234:8080/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Simple To-Do List in Python</title>
+      <link>http://192.168.0.234:8080/posts/my-first-post/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://192.168.0.234:8080/posts/my-first-post/</guid>
+      <description>&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;I built a simple command-line to-do list manager as one of my first Python projects. It&amp;rsquo;s basic but functional. You can add tasks, remove them, and save/load from a JSON file.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-i-learned&#34;&gt;What I Learned&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Working with lists and basic data structures&lt;/li&gt;&#xA;&lt;li&gt;Reading and writing JSON files&lt;/li&gt;&#xA;&lt;li&gt;Building a simple menu-driven interface&lt;/li&gt;&#xA;&lt;li&gt;Exception handling (try/except blocks)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-code&#34;&gt;The Code&lt;/h2&gt;&#xA;&lt;p&gt;The app lets you:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;View all tasks&lt;/li&gt;&#xA;&lt;li&gt;Add new tasks&lt;/li&gt;&#xA;&lt;li&gt;Mark tasks as completed or uncompleted&lt;/li&gt;&#xA;&lt;li&gt;Remove tasks by number&lt;/li&gt;&#xA;&lt;li&gt;Save your list to a file&lt;/li&gt;&#xA;&lt;li&gt;Load a previously saved list&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s Next&lt;/h2&gt;&#xA;&lt;p&gt;I might add features like:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

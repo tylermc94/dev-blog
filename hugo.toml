@@ -1,0 +1,4 @@
+baseURL = 'http://192.168.0.234:8080/'
+languageCode = 'en-us'
+title = 'Tylers Project Blog'
+theme = 'ananke'
