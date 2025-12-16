@@ -20,16 +20,12 @@ I am a Level 2 Software Support Engineer with HPE supporting the Zerto product. 
 - Creating an AI workshop assistant using Claude
 - Building a Pi Bramble to get more comfortable in Kubernetes
 
-## My Setup
-
-- **Server:** Unraid with Home Assistant, MQTT, Pi-hole, InfluxDB
-- **Network:** Ubiquiti Dream Machine with various Unifi devices
-
 ## Hardware
 
-- **Galactica** My gaming PC with...
-- **Tower** Formerly "Tycho", a Dell Poweredge T410 that I got for dirt cheap off eBay. Running a Xeon  X5560 and 32GB of ECC RAM. A little outdated, but 100% capable of my current needs.
-- **Ender 3** My first and only 3D printer, I've had this for a few years and it has been rock solid. I swapped the motherboard and added a glass build plate and metal extruder, both other than that I havent done any crazy mods to it.
+- **Galactica:** My gaming PC with...
+- **Tower:** Formerly "Tycho", a Dell Poweredge T410 that I got for dirt cheap off eBay. Running a Xeon  X5560 and 32GB of ECC RAM. A little outdated, but 100% capable of my current needs. Runs Unraid with Home Assistant, MQTT, Pi-hole, InfluxDB and a few other things. *Network map coming soon*
+- **Network:** Ubiquiti Dream Machine with various Unifi devices
+- **Ender 3:** My first and only 3D printer, I've had this for a few years and it has been rock solid. I swapped the motherboard and added a glass build plate and metal extruder, both other than that I havent done any crazy mods to it.
 
 ## My Favorite Things
 Some things that are holding my attention at the moment.
