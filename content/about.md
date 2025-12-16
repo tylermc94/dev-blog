@@ -13,6 +13,7 @@ I am a Level 2 Software Support Engineer with HPE supporting the Zerto product. 
 
 - Learning Python fundamentals
 - Building up my homelab with Unraid, Home Assistant, Unifi Networking, and more
+- Building a Home Assistant Dashboard kiosk with a Raspberry Pi and a 7" touch screen
 
 ## Future Project Goals
 
