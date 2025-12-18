@@ -1,6 +1,6 @@
 +++
 title = 'Building a Simple To-Do List in Python'
-date = 2024-12-15
+date = 2025-12-15
 draft = false
 +++
 
