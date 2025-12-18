@@ -35,7 +35,7 @@ Some things that are holding my attention at the moment.
 
 ## Connect With Me
 
-- [GitHub](https://github.com/yourusername)
+- [GitHub](https://github.com/tylermc94)
 - [LinkedIn](https://www.linkedin.com/in/tyler-mcgeehan/)
 
 ---
