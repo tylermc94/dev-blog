@@ -37,6 +37,7 @@ Some things that are holding my attention at the moment.
 
 - [GitHub](https://github.com/tylermc94)
 - [LinkedIn](https://www.linkedin.com/in/tyler-mcgeehan/)
+- [Instagram](https://instagram.com/elevation1505)
 
 ---
 
