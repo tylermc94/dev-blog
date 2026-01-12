@@ -1,6 +1,6 @@
 +++
 title = 'Building an AI Powered Workshop Assistant'
-date = 2026-1-12
+date = 2026-01-12
 draft = false
 +++
 
