@@ -4,8 +4,6 @@ date = 2026-01-12
 draft = false
 +++
 
-# Building an AI Powered Workshop Assistant
-
 In 2025, I spent an average of five hours a day doom scrolling on my phone. Thinking about all of that wasted time makes me feel awful, so this year I’ve decided I want to make a change. I needed a large-scale project that I could focus on throughout the year to give me something that is always available to work on and is easy to pick up and put down when I have a bit of free time throughout the day. I’ve been slowly working on advancing my IT skills, building out my homelab and learning new things as I go, so I wanted this project to be in that IT/Development space. Something I’ve been really interested in for a while is voice assistants and the idea of something like Jarvis to be my assistant while I work on projects---like a personalized Alexa using an LLM for complex conversations, but also with access to all of my systems like Unifi and Home Assistant. 
 
 Another big facet of this is project management. I am horribly unorganized, and have a bad habit of saying “I don’t need to write it down. I’ll remember,” and then immediately forgetting whatever it was. I started using Notion to track my projects, so I want this tool to integrate with that as well. Ideally it would be able to create a new project page, edit documents with progress updates or other information, and organize pages based off a set structure so I can just talk to it about what I’m working on and it can document for me. Anyone who has ever played D&D with me knows that I am terrible at taking notes and I always regret not being better about it.
