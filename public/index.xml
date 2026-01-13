@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tylers Project Blog</title>
+    <title>Tyler's Project Blog</title>
     <link>http://192.168.0.234:8080/</link>
     <description>Recent content on Tylers Project Blog</description>
     <generator>Hugo</generator>
