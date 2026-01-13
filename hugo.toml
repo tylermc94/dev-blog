@@ -1,4 +1,4 @@
 baseURL = 'http://192.168.0.234:8080/'
 languageCode = 'en-us'
-title = 'Tyler's Project Blog'
+title = "Tyler's Project Blog"
 theme = 'ananke'
