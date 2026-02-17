@@ -8,7 +8,7 @@ categories = ["Projects"]
 # featured_image = "/images/workshop-forge-phase1.jpg"
 +++
 
-### I. Hook / Opening (2-3 paragraphs)
+### I. Phase One Complete!
 
 Two months ago, I set myself a goal to waste less time doom scrolling and spend more time being productive. My first big project was a Workshop Assistant app that I now call "The Forge." My goal was to create a voice assistant tailored to my workflow and hobbies. Since I'm building this as an actual tool, as well as using it as a learning opportunity, I broke the project into phases, each one adding on a new concept to figure out. As I wrap up Phase 1, I'm feeling really good about the project as a whole. It's been tough, like learning any new thing, but I feel really good about what I've accomplished so far. 
 
