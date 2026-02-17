@@ -1,14 +1,18 @@
 +++
 title = 'Workshop Assistant Phase One Update'
 date = 2026-02-17
-draft = true
+draft = false
+description = "I built a voice-controlled workshop assistant from scratch in 2 weeks. Here are the challenges I faced, what worked, and what I learned about speech recognition on Raspberry Pi."
+tags = ["voice-assistant", "raspberry-pi", "python", "speech-recognition", "maker-projects", "workshop-automation"]
+categories = ["Projects"]
+# featured_image = "/images/workshop-forge-phase1.jpg"
 +++
 
 ### I. Hook / Opening (2-3 paragraphs)
 
 Two months ago, I set myself a goal to waste less time doom scrolling and spend more time being productive. My first big project was a Workshop Assistant app that I now call "The Forge." My goal was to create a voice assistant tailored to my workflow and hobbies. Since I'm building this as an actual tool, as well as using it as a learning opportunity, I broke the project into phases, each one adding on a new concept to figure out. As I wrap up Phase 1, I'm feeling really good about the project as a whole. It's been tough, like learning any new thing, but I feel really good about what I've accomplished so far. 
 
-Even though its just a basic framework with limited functionality right now, the first time I was in a situation where my hands were busy and I could just say "Hey Forge, set a timer for 5 minutes" and have it actually set the timer and remind me was a really cool moment. Even though I could do the exact same thing with Siri on my phone, the fact that this was something I put together myself (with a little help from Claude), made it the most impressive timer I've used.
+Even though it's just a basic framework with limited functionality right now, the first time I was in a situation where my hands were busy and I could just say "Hey Forge, set a timer for 5 minutes" and have it actually set the timer and remind me was a really cool moment. Even though I could do the exact same thing with Siri on my phone, the fact that this was something I put together myself (with a little help from Claude), made it the most impressive timer I've used.
 
 ---
 
@@ -35,7 +39,7 @@ My goals for phase one were relatively simple:
 - Text-to-speech responses
 - All running locally on a Raspberry Pi 5
 
-My goal for phase one was to start with the basic framework. At its most basic, I need to be able to ask Forge a question and get an answer back. This way as I move onto more complex components, it all runs through the voice pipeline I made here in Phase One. 
+My goal for phase one was to start with the basic framework. At it's most basic, I need to be able to ask Forge a question and get an answer back. This way as I move onto more complex components, it all runs through the voice pipeline I made here in Phase One. 
 
 ---
 
@@ -43,7 +47,7 @@ My goal for phase one was to start with the basic framework. At its most basic, 
 
 Since I have an abundance of Raspberry Pi's, my goal was to make this program run on a Pi 5. The Raspberry Pi 5 has plenty of resources to run the basic workshop assistant functionality and overhead for adding more complex features down the road. For audio I/O, my initial plan was to use a Focusrite Scarlett 2i4 that I've had for years collecting dust in the basement. It works perfectly for audio input with an Audiotechnica condenser mic, but I wasn't able to get it to output to any speakers, so I had to also use a separate USB speaker set. At some point in the future I'm planning on exploring other audio devices for this setup.
 
-As for the software, I made some modifications to my original plan, mainly switching my speech-to-text to [`faster-whisper`](https://github.com/SYSTRAN/faster-whisper) for better output than I could get with `vosk`. Since I wanted dynamic recording, where it continues listening until I'm done speaking, `faster-whisper` was the best choice. I also changed to using [`Piper`](https://github.com/rhasspy/piper) for my text-to-speech. I had originally planned to use `pyttsx3`, but before I implemented it I found Piper, which sounds much more realistic and is designed to run on edge devices like a Raspberry Pi. 
+As for the software, I made some modifications to my original plan, mainly switching my speech-to-text to [`faster-whisper`](https://GitHub.com/SYSTRAN/faster-whisper) for better output than I could get with `vosk`. Since I wanted dynamic recording, where it continues listening until I'm done speaking, `faster-whisper` was the best choice. I also changed to using [`Piper`](https://GitHub.com/rhasspy/piper) for my text-to-speech. I had originally planned to use `pyttsx3`, but before I implemented it I found Piper, which sounds much more realistic and is designed to run on edge devices like a Raspberry Pi. 
 
 I still went with [`Porcupine`](https://picovoice.ai/platform/porcupine/) for wake word detection and it works extremely well! I did run into one issue with it. When setting up porcupine, you record yourself speaking your wake word to train a model. I recorded myself in a quiet room on a high quality mic and used that model. Once I started working with the tool in my noisy basement workshop, I had to fight against the background noise in the room. I'm planning on training a new model, but I want to make sure I'm using the hardware that I plan to stay with before I do that.
 
@@ -89,7 +93,7 @@ Scarlett 2i4         Scarlett 2i4          │
 
 ### IV. The Journey - Key Challenges 
 
-While building everything out, I ran into a few issues. Working with the voice pipeline was more challenging than I expected. The first problem I ran into was dealing with audio routing in linux. I'm so used to Windows, I wanted everything to just be plug and play. Unfortunately, I had to play around with it a bunch to get the app to record from and play to the right devices. As of now, I have to run `aplay-l` and then hard code the card numbers for the speakers and mic in the Forge config. Its not the best solution, but I plan on adding a device selection menu when I get to the GUI phase.
+While building everything out, I ran into a few issues. Working with the voice pipeline was more challenging than I expected. The first problem I ran into was dealing with audio routing in linux. I'm so used to Windows, I wanted everything to just be plug and play. Unfortunately, I had to play around with it a bunch to get the app to record from and play to the right devices. As of now, I have to run `aplay-l` and then hard code the card numbers for the speakers and mic in the Forge config. it's not the best solution, but I plan on adding a device selection menu when I get to the GUI phase.
 
 Once I got the devices working and started working with `vosk` for speech to text, I ran into my next major issue. With background noise in the basement and limited context in my short questions, it really struggled to accurately output what I was saying. If I said "What's four plus four," it would usually come back with "whats for plus for". Once that gets passed to the calculator, it would throw an error because it didn't receive any numbers. I played around a lot with the `vosk` configuration, changing how often it sampled my voice during a question, changing mic settings to get rid of background noise, and adding logic to the code to correct specific homophones.
 ```python
@@ -150,7 +154,7 @@ The last major issue I ran into was dynamic recording. In the beginning I had it
 
 ### V. What Actually Works Now 
 
-Overall, I think I'm in a really good place with the Forge! It might seem super basic to someone else trying it out (and feel free to try it out, [the repo](https://github.com/tylermc94/workshop-assistant) is public and decently well documented), but I'm really happy with it for my first big coding project. I'm able to set timers, do basic math, and ask for the current date and time. While the feature set is limited, the next steps are to grow it with integrations for AI, home assistant, and whatever else I can think of to make it as useful as possible for me. 
+Overall, I think I'm in a really good place with the Forge! It might seem super basic to someone else trying it out (and feel free to try it out, [the repo](https://GitHub.com/tylermc94/workshop-assistant) is public and decently well documented), but I'm really happy with it for my first big coding project. I'm able to set timers, do basic math, and ask for the current date and time. While the feature set is limited, the next steps are to grow it with integrations for AI, home assistant, and whatever else I can think of to make it as useful as possible for me. 
 
 The performance is honestly better than I had hoped for. The wake word is recognized ~95% of the time, even in the noisy basement, and response time after I finish a query is under 3 seconds for the simple skills it has currently. I think as a framework to build onto going forward, I'm really happy with it!
 
@@ -161,18 +165,18 @@ The performance is honestly better than I had hoped for. The wake word is recogn
 Since the goal of Phase One was to just have a working voice pipeline and a few basic skills for testing, there are definitely some shortcomings to address later. 
 - Timers run completely in the background with no way of modifying them or knowing how much time is left.
 - Killing the program takes forever because of the wake word threads needing to time out.
-- Theres no automatic recovery from crashes. If I just leave it running in the background and it crashes, I don't know it until I try to ask it something and don't get an answer.
+- There's no automatic recovery from crashes. If I just leave it running in the background and it crashes, I don't know it until I try to ask it something and don't get an answer.
 
 I think these are all relatively simple issues that I can fix later on. These aren't blockers for daily use, just polish items for later phases. Overall, there are no major bugs at this point that I've found. I'm sure I'll run into more later, but for now I'm happy with what I have. 
 
 ---
 
 ### VII. The Development Process 
-Since this was my first big coding project, I've had to create my development workflow on the fly. I started out keeping all of my notes and ideas in a Claude chat, asking it for information when I couldn't remember. This was fine, but I eventually moved to Notion to track the overall project and my progress and notes. Keeping everything as organized as possible has been difficult, but well worth it. While writing this blog post, I have Notion open and its been incredibly easy to look back and reference everything that I've done.
+Since this was my first big coding project, I've had to create my development workflow on the fly. I started out keeping all of my notes and ideas in a Claude chat, asking it for information when I couldn't remember. This was fine, but I eventually moved to Notion to track the overall project and my progress and notes. Keeping everything as organized as possible has been difficult, but well worth it. While writing this blog post, I have Notion open and it's been incredibly easy to look back and reference everything that I've done.
 
 My main goal with the planning of Phase One was to break it down into chunks that were easy to focus on one at a time. This made sure that I stayed on track while working on each component and helped keep my momentum up. Since each component had to be implemented and working before the next one could be started, it meant that I got to build something up, get it working, and then feel good about the accomplishment before moving on to the next piece. This kept my ADHD brain happy and interested so I didn't just give up on the project before it even had a chance.
 
-As my first major coding project, this was my first time really working with Github. I've used Github in the past to access things made by others and to save my little learning projects, but this project was the first time I had a multi tiered project file to update. I had to learn how gitignore works, and when I adapted the initial voice pipeline to `async` functions to allow timers to run in the background, I learned how branching works. I learned a ton about source control and change tracking in this project and it really wasn't as difficult as I expected.a
+As my first major coding project, this was my first time really working with GitHub. I've used GitHub in the past to access things made by others and to save my little learning projects, but this project was the first time I had a multi tiered project file to update. I had to learn how gitignore works, and when I adapted the initial voice pipeline to `async` functions to allow timers to run in the background, I learned how branching works. I learned a ton about source control and change tracking in this project and it really wasn't as difficult as I expected.
 
 On the point of the `async` conversion, that wasn't something I had initially planned for. If I set a 10-minute timer, I didn't want the entire system to freeze for 10 minutes waiting for it to finish - I needed to be able to ask other questions while the timer ran.
 
@@ -197,7 +201,7 @@ This was my first real exposure to asynchronous programming, and it turned out t
 
 The biggest lesson I learned from this was that breaking up a large project into smaller, more digestible chunks really works well for the way I work. There were definitely a few times that I ran into issues and felt the urge to give up, but these were minor roadblocks and once I pushed through a few, I built up momentum and those small issues became less of a problem.
 
-I'm not the most patient person, so the amount of time I had to spend researching different libraries and tools for the voice pipeline, only to later scrap those tools for something else was something I really struggled with the first time it happened. When I realized that `vosk` was just not going to work for me and I would have to rewrite almost the entire speech to text component, I almost gave up. I definitely leaned on Claude AI for those moments, letting it do a bit more of the research and write the initial test code to make sure I wouldn't waste more time on another non-viable tool. I think I let myself get a bit overambitious with the first bits, like building the whole STT component with `vosk` before making sure it would even work. For the later pieces, like TTS and skills, I wrote minimal testing functions just to make sure it would actually work the way I needed it to, before fully building out the code.
+I'm not the most patient person, so the amount of time I had to spend researching different libraries and tools for the voice pipeline, only to later scrap those tools for something else was something I really struggled with the first time it happened. When I realized that `vosk` was just not going to work for me and I would have to rewrite almost the entire speech to text component, I almost gave up. I definitely leaned on Claude AI for those moments, letting it do a bit more of the research and write the initial test code to make sure I wouldn't waste more time on another non-viable tool. I think I let myself get a bit overambitious with the first bit's, like building the whole STT component with `vosk` before making sure it would even work. For the later pieces, like TTS and skills, I wrote minimal testing functions just to make sure it would actually work the way I needed it to, before fully building out the code.
 
 ---
 
@@ -220,6 +224,6 @@ There are a few things I want to implement alongside those features:
     - Since every message to Claude costs money, I want to minimize how much I have to use it as much as I can. In my Claude integration, I want to have it track the queries that it handles the most and give me reports so I can find ways to handle some of those queries locally. It will track the intention of what I'm asking, so they don't have to be worded the same to be grouped together, and give me information on the output, ways that I've phrased the questions, and anything else that would be helpful in programming a local skill handler.
 
 
-Phase One proved to me that this project is doable if I just put in the effort. Along with developing the Forge tool itself, I've also developed and adapted my workflow and found that programming isn't as difficult and scary as I thought. I'm really excited to keep moving forward with this project and see how it evolves. I've already put the skills I learned with Forge to use in other projects, I built a Discord bot to help schedule D&D games with my group using the programming skills I started here. Follow along on my [Instagram](https://www.instagram.com/elevation1505/) to track my progress and see the other cool stuff I'm working on!
+Phase One proved to me that this project is doable if I just put in the effort. Along with developing the Forge tool it'self, I've also developed and adapted my workflow and found that programming isn't as difficult and scary as I thought. I'm really excited to keep moving forward with this project and see how it evolves. I've already put the skills I learned with Forge to use in other projects, I built a Discord bot to help schedule D&D games with my group using the programming skills I started here. Follow along on my [Instagram](https://www.instagram.com/elevation1505/) to track my progress and see the other cool stuff I'm working on!
 
 ---
