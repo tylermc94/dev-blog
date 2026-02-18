@@ -16,7 +16,7 @@ pagination.pagerSize = 5
   showLanguageSelector = false
   
   # set theme to full screen width
-  fullWidthTheme = false
+  fullWidthTheme = true
   
   # center theme with default width
   centerTheme = true
@@ -33,6 +33,10 @@ pagination.pagerSize = 5
   # show table of contents
   Toc = true
   TocTitle = "Table of Contents"
+
+  # Color scheme
+  # Options: orange, blue, red, green, pink
+  themeColor = "green"
 
 [params.logo]
   logoText = "elevation1505"
