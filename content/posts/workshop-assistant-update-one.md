@@ -2,10 +2,11 @@
 title = 'Workshop Assistant Phase One Update'
 date = 2026-02-17
 draft = false
+toc = true
 description = "I built a voice-controlled workshop assistant from scratch in 2 weeks. Here are the challenges I faced, what worked, and what I learned about speech recognition on Raspberry Pi."
 tags = ["voice-assistant", "raspberry-pi", "python", "speech-recognition", "maker-projects", "workshop-automation"]
 categories = ["Projects"]
-# featured_image = "/images/workshop-forge-phase1.jpg"
+cover = "/images/workshop-forge-phase1.jpg"
 +++
 
 ### I. Phase One Complete!

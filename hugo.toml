@@ -1,4 +1,53 @@
-baseURL = 'http://192.168.0.234:8080/'
+baseURL = 'https://blog.elevation1505.dev/'
 languageCode = 'en-us'
-title = 'Tylers Project Blog'
-theme = 'ananke'
+title = "Tyler's Project Blog"
+theme = "terminal"
+pagination.pagerSize = 5
+
+# Required for Chroma and the custom syntax highlighting
+[markup.highlight]
+  noClasses = false
+
+[params]
+  # dir name of your main content (default is `content/posts`)
+  contentTypeName = "posts"
+  
+  # show selector to switch language
+  showLanguageSelector = false
+  
+  # set theme to full screen width
+  fullWidthTheme = false
+  
+  # center theme with default width
+  centerTheme = true
+  
+  # auto cover images
+  autoCover = true
+  
+  # show last updated dates
+  showLastUpdated = false
+  
+  # show reading time
+  readingTime = true
+  
+  # show table of contents
+  Toc = true
+  TocTitle = "Table of Contents"
+
+[params.logo]
+  logoText = "elevation1505"
+  logoHomeLink = "/"
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts"
+
+[module]
+[[module.imports]]
+  path = 'github.com/panr/hugo-theme-terminal/v4'
